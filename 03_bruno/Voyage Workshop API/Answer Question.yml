@@ -1,0 +1,25 @@
+info:
+  name: Answer Question
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/answer_question
+  body:
+    type: json
+    data: |-
+      {
+        "question": "Quale provider viene usato in MongoDB Search per la funzione di autoEmbed, ovvero per abilitare la generazione automatizzata di text embedding sui documenti nel database?\nOpzioni:\n- A) OpenAI\n- B) Voyage AI \n- C) Hugging Face \n- D) AWS Bedrock",
+        "use_rag":true,
+        "use_hybrid":true,
+        "use_reranker":true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
