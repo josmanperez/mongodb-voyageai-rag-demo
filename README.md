@@ -97,6 +97,14 @@ LM Studio host, model name, and dummy API key are hardcoded (`lmstudio_base_url`
 
 ### Environment
 
+From the repository root, copy the provided environment template:
+
+```bash
+cp 02_app_backend/.env.example 02_app_backend/.env
+```
+
+Then replace the placeholder values in `02_app_backend/.env`. The backend loads this file at startup using `python-dotenv`.
+
 Create `02_app_backend/.env`. The backend loads it at startup (`python-dotenv`).
 
 **Always required** (MongoDB retrieval and Voyage embeddings / reranking):
